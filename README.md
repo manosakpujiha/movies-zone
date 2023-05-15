@@ -1,6 +1,8 @@
 5th, April 2023
 
-https://photos.google.com/photo/AF1QipOZG8HdD_mhuJFeIz4KHyRvW08AW_hzfU5Fp3II
+
+![MoviesZoneLogo](https://github.com/manosakpujiha/movies-zone/assets/70998471/1c361136-0f5d-4c43-9185-0a1aaffebb88)
+
 * Your one-stop destination for the latest movie trailers and teasers.
 
 # Project Proposal
