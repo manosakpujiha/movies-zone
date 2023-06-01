@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { 
+  // useEffect, 
+  useState } from 'react';
 import './LoginScreen.css';
 import SignupScreen from './SignupScreen';
 import Logo from '../assets/MoviesZoneLogo.png';
 
 function LoginScreen() {
-  const [show, handleShow] = useState(false);
-  const transitionNavBar = () => {
-      if (window.scrollY > 100) {
-          handleShow(true);
-      }
-      else {
-          handleShow(false)
-      }
-  }
+  // const [show, handleShow] = useState(false);
+  // const transitionNavBar = () => {
+  //     if (window.scrollY > 100) {
+  //         handleShow(true);
+  //     }
+  //     else {
+  //         handleShow(false)
+  //     }
+  // }
 
-  useEffect(() => {
-      window.addEventListener('scroll', transitionNavBar);
-      return () => window.removeEventListener('scroll', transitionNavBar)
-  }, []
-  )
+  // useEffect(() => {
+  //     window.addEventListener('scroll', transitionNavBar);
+  //     return () => window.removeEventListener('scroll', transitionNavBar)
+  // }, []
+  // )
 
   const [signIn, setSignIn] = useState(false)
   return (

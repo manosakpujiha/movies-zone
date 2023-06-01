@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import {onAuthStateChanged } from "firebase/auth";
 import {auth} from "./firebase";
 import './App.css';
@@ -23,7 +23,7 @@ function App() {
             }
           )
         )
-        console.log(`User is signed in as ${userAuth.displayName} and your user name is ${userAuth.email}`, user)
+        console.log(`User is signed in as ${userAuth.email} and your user name is ${userAuth.displayName}`)
       } else {
           console.log(`User is signed out.`, userAuth)
           dispatch(logout())
@@ -46,7 +46,6 @@ function App() {
           </>
         )
        }
-
       </BrowserRouter>
     </div>
   );

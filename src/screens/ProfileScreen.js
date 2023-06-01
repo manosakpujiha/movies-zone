@@ -16,7 +16,7 @@ function ProfileScreen() {
             <div className='profileScreen__body'>
                 <h1>Edit Profile</h1>
                 <div className='profileScreen__info'></div>
-                <img src={img}/>
+                <img src={img} alt='background'/>
                 <div className="profileScreen__details">
                     <h2 className="">{user.email}</h2>
                     <div className="profileScreen__plans">
