@@ -1,22 +1,53 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
+import {onAuthStateChanged } from "firebase/auth";
+import {auth} from "./firebase";
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
-import Login from './screens/Login';
+import LoginScreen from './screens/LoginScreen';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/user/userSlice';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
-  const user = '';
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  useEffect( () => {
+    const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login(
+            {
+              uid: userAuth.uid,
+              email: userAuth.email,
+            }
+          )
+        )
+        console.log(`User is signed in as ${userAuth.displayName} and your user name is ${userAuth.email}`, user)
+      } else {
+          console.log(`User is signed out.`, userAuth)
+          dispatch(logout())
+      }
+    });
+    return unsubscribe;
+  }, [dispatch])
+
   return (
     <div className="app">
       <BrowserRouter>
-        { !user ? <Login/> : <HomeScreen/>}
-        <Routes>
-          <Route path="/Login" element={<h1>Login Page</h1>} />
-          <Route path="/test" element={<h1>Test Page</h1>} />
-        </Routes>
-      </BrowserRouter>
+        { !user ? <LoginScreen/> : (
+          <>
+            <Routes>
+              <Route path="/" element={<HomeScreen/>} />
+            </Routes>
+            <Routes>
+              <Route path="/profile" element={<ProfileScreen/>} />
+            </Routes>
+          </>
+        )
+       }
 
+      </BrowserRouter>
     </div>
   );
 }
