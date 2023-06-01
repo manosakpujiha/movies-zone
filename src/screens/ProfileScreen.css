@@ -1,0 +1,23 @@
+.profileScreen{
+    height: 100vh;
+    color: white;
+}
+
+.profileScreen__body{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto 0 auto;
+    padding-top: 8%;
+    max-width: 800px;
+}
+
+/* .profileScreen__info{
+    display: flex;
+}
+
+.profileScreen__body > h1 {
+    font-size: 60px;
+    font-weight:  400;
+
+} */

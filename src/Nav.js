@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 // import { useHistory, Link } from "react-router-dom";
 import './Nav.css';
 import logo from './assets/MoviesZoneLogo.png';
-import avatar from './assets/Netflix-avatar.png';
+import avatar from './assets/user emojipng.com-11281132.png';
 
 function Nav() {
     const [show, handleShow] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProfileScreen.css';
 import Nav from '../Nav';
-import img from '../assets/backdropImage.jpg';
+import img from '../assets/MoviesZoneBg.jpg';
 import { auth } from '../firebase';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/user/userSlice';
