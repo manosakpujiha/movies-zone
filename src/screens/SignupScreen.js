@@ -22,7 +22,10 @@ function SignupScreen() {
       updateProfile(auth.currentUser, { displayName: displayName });
     }
     )
-    .catch( (error) => console.log(error.message))
+    .catch( (error) => {
+      console.log(error.message);
+      alert(error.message);
+    })
     // try {
     //   const userCredential = await createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value);
     //   // Sign up successful
@@ -37,8 +40,12 @@ function SignupScreen() {
     console.log (1, emailRef.current.value, passwordRef.current.value)
     console.log (2, email, password);
     signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-    .then( (user) => console.log(`you are loggid in as ${user.user.email}`, user))
-    .catch( (error) => console.log(error.message))
+    .then( (user) => console.log(`you are logge d in as ${user.user.email}`, user))
+    .catch( (error) => {
+      console.log(error.message);
+      alert(error.message);
+    }
+    )
   }
 
   return (

@@ -1,7 +1,9 @@
 import React , {useEffect, useState} from 'react';
-import './Row.css';
 import axios from './axios';
 import {base_url} from './Requests'
+import './Rowm.css';
+
+
 
 
 function Row({title, fetchUrl, isLargeRow=false}) {
