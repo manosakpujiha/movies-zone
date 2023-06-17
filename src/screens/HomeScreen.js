@@ -15,15 +15,15 @@ function HomeScreen() {
 
         <Row 
           title='Movies Zone Picks'
-          fetchUrl={requests.fetchNetflixOriginals}
+          fetchUrl={requests.fetchMoviesZonePicks}
           isLargeRow
         />
-         <Row title='Trending' fetchUrl={requests.fetchTrending} />
-         <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
-         <Row title='ACTION' fetchUrl={requests.fetchActionMovies} />
+         <Row title='TRENDING' fetchUrl={requests.fetchTrending} />
+         <Row title='TOP RATED' fetchUrl={requests.fetchTopRated} />
+         {/* <Row title='ACTION' fetchUrl={requests.fetchActionMovies} />
          <Row title='COMEDY' fetchUrl={requests.fetchComedyMovies} />
          <Row title='HORROR' fetchUrl={requests.fetchHorrorMovies} />
-         <Row title='Documentary' fetchUrl={requests.fetchDocumentaries} />
+         <Row title='DOCUMENTARY' fetchUrl={requests.fetchDocumentaries} /> */}
     </div>
   )
 }

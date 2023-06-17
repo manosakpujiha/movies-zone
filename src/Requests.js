@@ -2,7 +2,7 @@ const API_KEY= '28100d232b8f010f71e3daffec95db5c';
 export const base_url = 'https://image.tmdb.org/t/p/original/';
 let requests = {
     fetchTrending :`trending/all/week?api_key=${API_KEY}&language=en-US`,
-    fetchNetflixOriginals :`discover/tv?api_key=${API_KEY}&with_networks=213`,
+    fetchMoviesZonePicks :`discover/tv?api_key=${API_KEY}&with_networks=213`,
     fetchTopRated :`movie/top_rated?api_key=${API_KEY}&language=en-US`,
     fetchActionMovies :`discover/movie?api_key=${API_KEY}&with_genres=28`,
     fetchComedyMovies :`discover/movie?api_key=${API_KEY}&with_genres=35`,

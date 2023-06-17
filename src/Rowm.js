@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from './axios';
 import {base_url}  from './Requests';
-import './Row.css';
+import './Rowm.css';
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
 
