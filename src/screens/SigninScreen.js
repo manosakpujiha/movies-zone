@@ -5,10 +5,10 @@ import {auth} from "../firebase";
 import {signInWithEmailAndPassword } from 'firebase/auth';
 
 function SigninScreen({changeScreen}) {
-  const [displayName, setDisplayName] = useState('');
+  // const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   function handleClick() {
     console.log('switched to signup');
     changeScreen(2)
