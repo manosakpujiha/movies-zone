@@ -20,19 +20,39 @@
 }
 
 .nav__logo {
-    position: fixed;
+    /* position: fixed;
     top: 10px;
-    left: 0;
+    left: 0; */
     width: 100px;
     object-fit: contain;
     padding-left: 10px;
     cursor: pointer;
 
 }
+.nav__buttons {
+    margin-right: 50px; 
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 30px; Adds spacing between username and avatar */
+    /* background-color: blanchedalmond; */
+}
 
 .nav__avatar {
-    position: fixed;
-    right: 20px;
+    /* position: fixed;
+    right: 0px; */
     width: 30px;
+    margin-right: 10px;
     cursor: pointer;
+    /* background-color: greenyellow; */
+}
+
+.nav__username {
+    /* position: fixed;
+    right: 300px; */
+    width: 30px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    /* background-color: indianred; */
 }

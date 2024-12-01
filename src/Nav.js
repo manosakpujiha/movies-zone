@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/user/userSlice';
+
 // import { useHistory, Link } from "react-router-dom";
 import './Nav.css';
 import logo from './assets/MoviesZoneLogo.png';
@@ -7,6 +10,9 @@ import avatar from './assets/user emojipng.com-11281132.png';
 
 function Nav() {
     const [show, handleShow] = useState(false);
+    const user = useSelector(selectUser)
+    console.log(user)
+    
     const navigate = useNavigate();
     useEffect(() => {
         window.addEventListener('scroll', transitionNavBar);
@@ -25,12 +31,16 @@ function Nav() {
     return (
         <div className={`nav ${show && 'nav__black'}`}>
             <div className='nav__contents'>
-            </div>
-            <img  onClick={() => navigate('/')} className='nav__logo' src={logo} alt='logo'/>
-            {/* <Link to="/profile"> */}
-                <img className='nav__avatar' onClick={() =>navigate('/profile')} src={avatar} alt='avatar' />
-            {/* </Link> */}
             
+                <img  onClick={() => navigate('/')} className='nav__logo' src={logo} alt='logo'/>
+                {/* <Link to="/profile"> */}
+                <div className='nav__buttons'>
+                   
+                    <img className='nav__avatar' onClick={() =>navigate('/profile')} src={avatar} alt='avatar' />
+                    <span className='nav__username'>{user.email}</span>
+                </div>
+                {/* </Link> */}
+            </div>
         </div>
     )
 }
