@@ -35,9 +35,9 @@ function Nav() {
                 <img  onClick={() => navigate('/')} className='nav__logo' src={logo} alt='logo'/>
                 {/* <Link to="/profile"> */}
                 <div className='nav__buttons'>
-                   
-                    <img className='nav__avatar' onClick={() =>navigate('/profile')} src={avatar} alt='avatar' />
                     <span className='nav__username'>{user.email}</span>
+                    <img className='nav__avatar' onClick={() =>navigate('/profile')} src={avatar} alt='avatar' />
+                    
                 </div>
                 {/* </Link> */}
             </div>
