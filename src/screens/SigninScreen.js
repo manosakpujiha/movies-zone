@@ -47,7 +47,7 @@ function SigninScreen({changeScreen}) {
           onChange={(event) => setPassword(event.target.value)}
           placeholder="Password"
         />
-        <button type='submit' onClick={login}>Sign In</button>
+        <button type='submit' onClick={login}>SignIn</button>
         <h4> 
             <span className='signupScreen__gray'>New to Movies Zone?</span>
             <span className='signupScreen__link' 
