@@ -18,3 +18,5 @@ describe('SigninScreen Component', () => {
     expect(screen.getByPlaceholderText('Password')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /SignIn/i })).toBeInTheDocument();
   });
+
+});
