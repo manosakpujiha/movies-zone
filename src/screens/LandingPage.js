@@ -3,7 +3,7 @@ import React from 'react'
 function LandingPage({changeScreen}) {
     function handleClick(event) {
       event.preventDefault();
-        console.log('switched to signin');
+        // console.log('switched to signin');
     
         changeScreen(1)
         // console.log('register')

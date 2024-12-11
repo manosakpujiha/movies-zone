@@ -10,7 +10,7 @@ function SigninScreen({changeScreen}) {
   const [password, setPassword] = useState('');
   // const navigate = useNavigate();
   function handleClick() {
-    console.log('switched to signup');
+    // console.log('switched to signup');
     changeScreen(2)
   }
 
@@ -18,12 +18,12 @@ function SigninScreen({changeScreen}) {
   const passwordRef = useRef(null);
   const login = async (event) => {
     event.preventDefault();
-    console.log (1, emailRef.current.value, passwordRef.current.value)
-    console.log (2, email, password);
+    // console.log (1, emailRef.current.value, passwordRef.current.value)
+    // console.log (2, email, password);
     signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
     .then( (user) => console.log(`you are signed in as ${user.user.email}`, user))
     .catch( (error) => {
-      console.log(error.message);
+      // console.log(error.message);
       alert(error.message);
     }
     )
